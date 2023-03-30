@@ -10,7 +10,7 @@ fs.writeFileSync("read.txt" , "I create new file");
 fs.appendFileSync("read.txt", "   also write this ")
 
 //For reading a file
-const bufData=fs.readFileSync("read.txt");
+const bufData=fs.readFileSync("read.txt" ,'utf-8');
 console.log(bufData);
 
 //Nodejs contain a new thing "buffer" javascript browser does not contain 
@@ -20,8 +20,11 @@ console.log(bufData);
 // 9 more bytes>
 
 //For conversion 
-const orgData=bufData.toString();
-console.log(orgData);
+// const orgData=bufData.toString();
+// console.log(orgData);
 
-//To rename the file 
-fs.renameSync("read.txt","readWrite.txt")
+// //To rename the file 
+// fs.renameSync("readWrite.txt","read.txt")
+
+//To delete the file 
+// fs.unlinkSync("readwrite.txt")
